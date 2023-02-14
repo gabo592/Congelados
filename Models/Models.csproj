@@ -42,9 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapitalHumano\Empleado.cs" />
+    <Compile Include="Compras\Compra.cs" />
+    <Compile Include="Compras\DetalleCompra.cs" />
+    <Compile Include="Compras\Proveedor.cs" />
     <Compile Include="Interfaces\IActivable.cs" />
     <Compile Include="Interfaces\IIdentity.cs" />
+    <Compile Include="Interfaces\INameable.cs" />
     <Compile Include="Interfaces\IPerson.cs" />
+    <Compile Include="Interfaces\ITransaction.cs" />
+    <Compile Include="Interfaces\ITransactionDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
