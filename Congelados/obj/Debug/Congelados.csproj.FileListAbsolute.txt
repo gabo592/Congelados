@@ -1,0 +1,11 @@
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Congelados.exe.config
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Congelados.exe
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Congelados.pdb
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.csproj.AssemblyReference.cache
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Principal.FrmLogin.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Properties.Resources.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.csproj.GenerateResource.cache
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.csproj.CoreCompileInputs.cache
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.exe
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.pdb
