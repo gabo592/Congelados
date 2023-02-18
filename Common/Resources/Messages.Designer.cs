@@ -59,5 +59,194 @@ namespace Common.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Cantidad del objeto no puede ser un valor menor que cero..
+        /// </summary>
+        internal static string CANTIDAD_NEGATIVA {
+            get {
+                return ResourceManager.GetString("CANTIDAD_NEGATIVA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La Clave o Contraseña del objeto no puede estar vacía..
+        /// </summary>
+        internal static string CLAVE_VACIA {
+            get {
+                return ResourceManager.GetString("CLAVE_VACIA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Descripcion del objeto no puede estar vacía..
+        /// </summary>
+        internal static string DESCRIPCION_DEFAULT {
+            get {
+                return ResourceManager.GetString("DESCRIPCION_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Descuento del objeto no puede contener un valor menor que cero..
+        /// </summary>
+        internal static string DESCUENTO_NEGATIVO {
+            get {
+                return ResourceManager.GetString("DESCUENTO_NEGATIVO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del objeto contiene un valor no permitido por el sistema..
+        /// </summary>
+        internal static string ID_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del Empleado asociado al objeto contiene un valor no permitido por el sistema..
+        /// </summary>
+        internal static string ID_EMPLEADO_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_EMPLEADO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del Municipio asociado al objeto contiene un valor no permitido por el sistema..
+        /// </summary>
+        internal static string ID_MUNICIPIO_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_MUNICIPIO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La Clave o Contraseña del objeto debe tener 4 caracteres mínimos..
+        /// </summary>
+        internal static string LONGITUD_CLAVE {
+            get {
+                return ResourceManager.GetString("LONGITUD_CLAVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Descripcion del objeto no puede tener más de 500 caracteres..
+        /// </summary>
+        internal static string LONGITUD_DESCRIPCION_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("LONGITUD_DESCRIPCION_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Direccion del objeto no puede tener más de 500 caracteres..
+        /// </summary>
+        internal static string LONGITUD_DIRECCION_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("LONGITUD_DIRECCION_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Primer Apellido del objeto no puede tener más de 50 caracteres..
+        /// </summary>
+        internal static string LONGITUD_PRIMER_APELLIDO_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("LONGITUD_PRIMER_APELLIDO_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Primer Nombre del objeto no puede tener más de 50 caracteres..
+        /// </summary>
+        internal static string LONGITUD_PRIMER_NOMBRE_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("LONGITUD_PRIMER_NOMBRE_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Segundo Apellido del objeto no puede tener más de 50 caracteres..
+        /// </summary>
+        internal static string LONGITUD_SEGUNDO_APELLIDO_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("LONGITUD_SEGUNDO_APELLIDO_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Segundo Nombre del objeto no puede tener más de 50 caracteres..
+        /// </summary>
+        internal static string LONGITUD_SEGUNDO_NOMBRE_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("LONGITUD_SEGUNDO_NOMBRE_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Telefono del objeto debe tener 8 caracteres exactos..
+        /// </summary>
+        internal static string LONGITUD_TELEFONO {
+            get {
+                return ResourceManager.GetString("LONGITUD_TELEFONO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La operación no realizar debido a que el modelo no existe o fue desactivado..
+        /// </summary>
+        internal static string MODELO_DESACTIVADO {
+            get {
+                return ResourceManager.GetString("MODELO_DESACTIVADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No se encontró el modelo..
+        /// </summary>
+        internal static string MODELO_NULO {
+            get {
+                return ResourceManager.GetString("MODELO_NULO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Nombre del objeto no puede estar vacía..
+        /// </summary>
+        internal static string NOMBRE_VACIO {
+            get {
+                return ResourceManager.GetString("NOMBRE_VACIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Precio del objeto no puede ser un valor menor que cero..
+        /// </summary>
+        internal static string PRECIO_NEGATIVO {
+            get {
+                return ResourceManager.GetString("PRECIO_NEGATIVO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Primer Apellido del objeto no puede estar vacía..
+        /// </summary>
+        internal static string PRIMER_APELLIDO_DEFAULT {
+            get {
+                return ResourceManager.GetString("PRIMER_APELLIDO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad Primer Nombre del objeto no puede estar vacía..
+        /// </summary>
+        internal static string PRIMER_NOMBRE_DEFAULT {
+            get {
+                return ResourceManager.GetString("PRIMER_NOMBRE_DEFAULT", resourceCulture);
+            }
+        }
     }
 }

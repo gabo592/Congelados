@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseDao.cs" />
+    <Compile Include="Base\IDao.cs" />
+    <Compile Include="Base\Validations.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -57,6 +60,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{e851ba4f-07eb-4946-856d-2a02b21d2f79}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{efe3d500-0511-4b3a-a83a-992e7f660ef2}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
