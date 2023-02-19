@@ -54,6 +54,10 @@
     <Compile Include="Base\IDao.cs" />
     <Compile Include="Base\Validations.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Interfaces\CapitalHumano\IEmpleadoDao.cs" />
+    <Compile Include="Interfaces\Compras\ICompraDao.cs" />
+    <Compile Include="Interfaces\Compras\IDetalleCompraDao.cs" />
+    <Compile Include="Interfaces\Compras\IProveedorDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
