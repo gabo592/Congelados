@@ -58,6 +58,10 @@
     <Compile Include="Interfaces\Compras\ICompraDao.cs" />
     <Compile Include="Interfaces\Compras\IDetalleCompraDao.cs" />
     <Compile Include="Interfaces\Compras\IProveedorDao.cs" />
+    <Compile Include="Interfaces\Inventario\ICategoriaProductoDao.cs" />
+    <Compile Include="Interfaces\Inventario\IDetalleProductoDao.cs" />
+    <Compile Include="Interfaces\Inventario\IMateriaPrimaDao.cs" />
+    <Compile Include="Interfaces\Inventario\IProductoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
