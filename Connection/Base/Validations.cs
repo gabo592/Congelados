@@ -16,7 +16,7 @@ namespace Connection.Base
         /// <param name="handler">Instancia del administrador de errores.</param>
         /// <param name="operacion">Operación a realizar dentro de la base de datos.</param>
         /// <returns>Verdadero si se encuentra algún error; en caso contrario, Falso.</returns>
-        public bool HasError<TModel>(TModel model, ErrorHandler handler, Operaciones operacion = Operaciones.DEFAULT) where TModel : new()
+        public static bool HasError<TModel>(TModel model, ErrorHandler handler, Operations operacion = Operations.DEFAULT) where TModel : new()
         {
             if (model == null)
             {
@@ -24,7 +24,7 @@ namespace Connection.Base
                 return true;
             }
 
-            if (model is IActivable activable && (operacion == Operaciones.UPDATE || operacion == Operaciones.DELETE))
+            if (model is IActivable activable && (operacion == Operations.UPDATE || operacion == Operations.DELETE))
             {
                 if (!activable.Estado)
                 {
@@ -32,7 +32,7 @@ namespace Connection.Base
                 }
             }
 
-            if (model is IIdentity identity && (operacion == Operaciones.UPDATE || operacion == Operaciones.DELETE))
+            if (model is IIdentity identity && (operacion == Operations.UPDATE || operacion == Operations.DELETE))
             {
                 if (identity.Id.Equals(default) || identity.Id < 0)
                 {
@@ -40,7 +40,7 @@ namespace Connection.Base
                 }
             }
 
-            if (model is INameable nameable && (operacion == Operaciones.CREATE || operacion == Operaciones.UPDATE))
+            if (model is INameable nameable && (operacion == Operations.CREATE || operacion == Operations.UPDATE))
             {
                 if (string.IsNullOrEmpty(nameable.Nombre))
                 {
@@ -48,7 +48,7 @@ namespace Connection.Base
                 }
             }
 
-            if (model is IPerson person && (operacion == Operaciones.CREATE || operacion == Operaciones.UPDATE))
+            if (model is IPerson person && (operacion == Operations.CREATE || operacion == Operations.UPDATE))
             {
                 if (string.IsNullOrEmpty(person.PrimerNombre))
                 {
@@ -96,7 +96,7 @@ namespace Connection.Base
                 }
             }
 
-            if (model is IProduct product && (operacion == Operaciones.CREATE || operacion == Operaciones.UPDATE))
+            if (model is IProduct product && (operacion == Operations.CREATE || operacion == Operations.UPDATE))
             {
                 if (string.IsNullOrEmpty(product.Descripcion))
                 {
@@ -119,7 +119,7 @@ namespace Connection.Base
                 }
             }
 
-            if (model is ISecurity security && (operacion == Operaciones.CREATE || operacion == Operaciones.UPDATE))
+            if (model is ISecurity security && (operacion == Operations.CREATE || operacion == Operations.UPDATE))
             {
                 if (string.IsNullOrEmpty(security.Clave))
                 {
@@ -132,7 +132,7 @@ namespace Connection.Base
                 }
             }
 
-            if (model is ITransaction transaction && (operacion == Operaciones.CREATE || operacion == Operaciones.UPDATE))
+            if (model is ITransaction transaction && (operacion == Operations.CREATE || operacion == Operations.UPDATE))
             {
                 if (transaction.IdEmpleado.Equals(default) || transaction.IdEmpleado < 0)
                 {
@@ -140,7 +140,7 @@ namespace Connection.Base
                 }
             }
 
-            if (model is ITransactionDetail transactionDetail && (operacion == Operaciones.CREATE || operacion == Operaciones.UPDATE))
+            if (model is ITransactionDetail transactionDetail && (operacion == Operations.CREATE || operacion == Operations.UPDATE))
             {
                 if (transactionDetail.Cantidad < 0)
                 {
@@ -159,7 +159,7 @@ namespace Connection.Base
         /// <summary>
         /// Contiene todas las operaciones básicas a realizar en la base de datos que requieren de una validación.
         /// </summary>
-        public enum Operaciones
+        public enum Operations
         {
             DEFAULT = 0,
             CREATE = 1,

@@ -17,6 +17,11 @@ namespace Models.CapitalHumano
 
         public string SegundoApellido { get; set; }
 
+        /// <summary>
+        /// Obtiene o establece el número de Cédula del Empleado.
+        /// </summary>
+        public string Cedula { get; set; }
+
         public string Telefono { get; set; }
 
         public string Direccion { get; set; }

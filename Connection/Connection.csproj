@@ -53,6 +53,8 @@
     <Compile Include="Base\BaseDao.cs" />
     <Compile Include="Base\IDao.cs" />
     <Compile Include="Base\Validations.cs" />
+    <Compile Include="CapitalHumano\EmpleadoDao.cs" />
+    <Compile Include="Constantes\StoredProcedures.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Interfaces\CapitalHumano\IEmpleadoDao.cs" />
     <Compile Include="Interfaces\Compras\ICompraDao.cs" />
