@@ -65,6 +65,9 @@
     <Compile Include="Interfaces\Seguridad\IUsuarioDao.cs" />
     <Compile Include="Interfaces\Ubicacion\IDepartamentoDao.cs" />
     <Compile Include="Interfaces\Ubicacion\IMunicipioDao.cs" />
+    <Compile Include="Interfaces\Ventas\IClienteDao.cs" />
+    <Compile Include="Interfaces\Ventas\IDetalleVentaDao.cs" />
+    <Compile Include="Interfaces\Ventas\IVentaDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -25,6 +25,14 @@ namespace Connection.Interfaces.Compras
         IEnumerable<Compra> Read(DateTime fecha);
 
         /// <summary>
+        /// Realiza una búsqueda dentro de la base de datos hasta encontrar una colección de registros que se encuentren dentro del rango de fecha especificado.
+        /// </summary>
+        /// <param name="fechaInicio">Fecha de la Compra a iniciar la búsqueda.</param>
+        /// <param name="fechaFinal">Fecha de la Compra a finalizar la búsqueda.</param>
+        /// <returns>Colección de objetos de tipo Compra que resulten de la búsqueda; en caso de no encontrar, retorna una colección vacía.</returns>
+        IEnumerable<Compra> Read(DateTime fechaInicio, DateTime fechaFinal);
+
+        /// <summary>
         /// Realiza una búsqueda dentro de la base de datos hasta encontrar una colección de registros que coincidan con el ID del Proveedor asociado a la Compra.
         /// </summary>
         /// <param name="idProveedor">Identificador único del Proveedor asociado a la Compra.</param>
