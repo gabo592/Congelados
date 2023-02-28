@@ -33,5 +33,29 @@
         public const string ProveedorDelete = "Compras.PROVEEDOR_DELETE";
 
         #endregion
+
+        #region Inventario
+
+        public const string CategoriaProductoCreate = "Inventario.CATEGORIA_PRODUCTO_CREATE";
+        public const string CategoriaProductoRead = "Inventario.CATEGORIA_PRODUCTO_READ";
+        public const string CategoriaProductoUpdate = "Inventario.CATEGORIA_PRODUCTO_UPDATE";
+        public const string CategoriaProductoDelete = "Inventario.CATEGORIA_PRODUCTO_DELETE";
+
+        public const string DetalleProductoCreate = "Inventario.DETALLE_PRODUCTO_CREATE";
+        public const string DetalleProductoRead = "Inventario.DETALLE_PRODUCTO_READ";
+        public const string DetalleProductoUpdate = "Inventario.DETALLE_PRODUCTO_UPDATE";
+        public const string DetalleProductoDelete = "Inventario.DETALLE_PRODUCTO_DELETE";
+
+        public const string MateriaPrimaCreate = "Inventario.MATERIA_PRIMA_CREATE";
+        public const string MateriaPrimaRead = "Inventario.MATERIA_PRIMA_READ";
+        public const string MateriaPrimaUpdate = "Inventario.MATERIA_PRIMA_UPDATE";
+        public const string MateriaPrimaDelete = "Inventario.MATERIA_PRIMA_DELETE";
+
+        public const string ProductoCreate = "Inventario.PRODUCTO_CREATE";
+        public const string ProductoRead = "Inventario.PRODUCTO_READ";
+        public const string ProductoUpdate = "Inventario.PRODUCTO_UPDATE";
+        public const string ProductoDelete = "Inventario.PRODUCTO_DELETE";
+
+        #endregion
     }
 }

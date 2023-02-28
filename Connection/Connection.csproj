@@ -73,6 +73,10 @@
     <Compile Include="Interfaces\Ventas\IClienteDao.cs" />
     <Compile Include="Interfaces\Ventas\IDetalleVentaDao.cs" />
     <Compile Include="Interfaces\Ventas\IVentaDao.cs" />
+    <Compile Include="Inventario\CategoriaProductoDao.cs" />
+    <Compile Include="Inventario\DetalleProductoDao.cs" />
+    <Compile Include="Inventario\MateriaPrimaDao.cs" />
+    <Compile Include="Inventario\ProductoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
