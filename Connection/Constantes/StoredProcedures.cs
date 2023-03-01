@@ -57,5 +57,42 @@
         public const string ProductoDelete = "Inventario.PRODUCTO_DELETE";
 
         #endregion
+
+        #region Seguridad
+
+        public const string UsuarioCreate = "Seguridad.USUARIO_CREATE";
+        public const string UsuarioRead = "Seguridad.USUARIO_READ";
+        public const string UsuarioUpdate = "Seguridad.USUARIO_UPDATE";
+        public const string UsuarioDelete = "Seguridad.USUARIO_DELETE";
+        public const string UsuarioLogin = "Seguridad.USUARIO_LOGIN";
+
+        #endregion
+
+        #region Ubicacion
+
+        public const string DepartamentoRead = "Ubicacion.DEPARTAMENTO_READ";
+        public const string MunicipioRead = "Ubicacion.MUNICIPIO_READ";
+
+        #endregion
+
+        #region Ventas
+
+        public const string ClienteCreate = "Ventas.CLIENTE_CREATE";
+        public const string ClienteRead = "Ventas.CLIENTE_READ";
+        public const string ClienteUpdate = "Ventas.CLIENTE_UPDATE";
+        public const string ClienteDelete = "Ventas.CLIENTE_DELETE";
+
+        public const string DetalleVentaCreate = "Ventas.DETALLE_VENTA_CREATE";
+        public const string DetalleVentaRead = "Ventas.DETALLE_VENTA_READ";
+        public const string DetalleVentaUpdate = "Ventas.DETALLE_VENTA_UPDATE";
+        public const string DetalleVentaDelete = "Ventas.DETALLE_VENTA_DELETE";
+
+        public const string VentaCreate = "Ventas.VENTA_CREATE";
+        public const string VentaRead = "Ventas.VENTA_READ";
+        public const string VentaReadByDates = "Ventas.VENTA_READ_BY_DATES";
+        public const string VentaUpdate = "Ventas.VENTA_UPDATE";
+        public const string VentaDelete = "Ventas.VENTA_DELETE";
+
+        #endregion
     }
 }
