@@ -59,6 +59,7 @@
     <Compile Include="Compras\ProveedorDao.cs" />
     <Compile Include="Constantes\StoredProcedures.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="Interfaces\CapitalHumano\IEmpleadoDao.cs" />
     <Compile Include="Interfaces\Compras\ICompraDao.cs" />
     <Compile Include="Interfaces\Compras\IDetalleCompraDao.cs" />
