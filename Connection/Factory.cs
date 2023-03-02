@@ -54,7 +54,7 @@ namespace Connection
         /// <returns>Tipo de DAO solicitado; en caso de no encontrar, genera una excepción.</returns>
         /// <exception cref="ArgumentException">Se dispara cuando no se encuentra el DAO solicitado.</exception>
         /// <exception cref="ArgumentNullException">Se dispara cuando el DAO no tiene un constructor apropiado.</exception>
-        public static TDao Invoke<TDao>(string connectionString, ErrorHandler handler) where TDao : new()
+        public static TDao Invoke<TDao>(string connectionString, ErrorHandler handler)
         {
             if (!Daos.TryGetValue(typeof(TDao), out Type daoType)) throw new ArgumentException("El tipo de DAO a invocar no se encuentra mapeado");
 

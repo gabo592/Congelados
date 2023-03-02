@@ -52,16 +52,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentacion\Base\FrmBuscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Base\FrmBuscador.Designer.cs">
+      <DependentUpon>FrmBuscador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CapitalHumano\FrmBuscadorEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CapitalHumano\FrmBuscadorEmpleados.Designer.cs">
+      <DependentUpon>FrmBuscadorEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CapitalHumano\FrmEditorEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CapitalHumano\FrmEditorEmpleado.Designer.cs">
+      <DependentUpon>FrmEditorEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Principal\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\Principal\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Principal\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Principal\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\Base\IServicioBase.cs" />
+    <Compile Include="Servicios\Base\ServicioBase.cs" />
+    <Compile Include="Servicios\Base\Session.cs" />
+    <Compile Include="Servicios\CapitalHumano\EmpleadoService.cs" />
+    <Compile Include="Servicios\DaoFactory.cs" />
+    <Compile Include="Servicios\Interfaces\IObservador.cs" />
+    <Compile Include="Servicios\Interfaces\ISujeto.cs" />
+    <Compile Include="Servicios\Seguridad\UsuarioService.cs" />
+    <Compile Include="Servicios\Ubicacion\UbicacionService.cs" />
+    <Compile Include="ViewModels\CapitalHumano\EmpleadoView.cs" />
+    <EmbeddedResource Include="Presentacion\Base\FrmBuscador.resx">
+      <DependentUpon>FrmBuscador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CapitalHumano\FrmBuscadorEmpleados.resx">
+      <DependentUpon>FrmBuscadorEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CapitalHumano\FrmEditorEmpleado.resx">
+      <DependentUpon>FrmEditorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Principal\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,7 +146,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="chocolate.ico" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\chocolate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{e851ba4f-07eb-4946-856d-2a02b21d2f79}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Connection\Connection.csproj">
+      <Project>{8eb887eb-3d18-40f9-9b2b-417b5c3bc68b}</Project>
+      <Name>Connection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{efe3d500-0511-4b3a-a83a-992e7f660ef2}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

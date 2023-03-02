@@ -52,6 +52,8 @@ namespace Common.Utils
                 builder.AppendLine(message);
             }
 
+            Clear();
+
             return builder.ToString();
         }
     }

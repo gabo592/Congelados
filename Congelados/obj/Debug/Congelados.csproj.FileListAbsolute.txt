@@ -9,3 +9,14 @@ C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.csproj.Ge
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.csproj.CoreCompileInputs.cache
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.exe
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.pdb
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Common.dll
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Connection.dll
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Models.dll
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Common.pdb
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Connection.pdb
+C:\Users\gabri\source\repos\Congelados\Congelados\bin\Debug\Models.pdb
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.csproj.CopyComplete
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Principal.FrmPrincipal.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Base.FrmBuscador.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.CapitalHumano.FrmBuscadorEmpleados.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.CapitalHumano.FrmEditorEmpleado.resources

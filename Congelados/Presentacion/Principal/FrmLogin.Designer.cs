@@ -167,6 +167,7 @@
             this.BtnIniciarSesion.TabIndex = 0;
             this.BtnIniciarSesion.Text = "Entrar";
             this.BtnIniciarSesion.UseVisualStyleBackColor = true;
+            this.BtnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
             // BtnCancelar
             // 
@@ -177,13 +178,14 @@
             this.BtnCancelar.TabIndex = 1;
             this.BtnCancelar.Text = "Salir";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(395, 288);
+            this.ClientSize = new System.Drawing.Size(395, 286);
             this.Controls.Add(this.FlwPnlBotones);
             this.Controls.Add(this.TbPnlDatos);
             this.Controls.Add(this.PbLogo);

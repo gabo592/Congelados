@@ -88,7 +88,7 @@ namespace Connection
                     {
                         SqlDataReader dataReader = command.ExecuteReader();
 
-                        return MapToObject<TModel>(dataReader);
+                        return MapToObject<TModel>(dataReader).ToArray();
                     }
                     catch (Exception ex)
                     {
