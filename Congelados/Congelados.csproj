@@ -70,6 +70,42 @@
     <Compile Include="Presentacion\CapitalHumano\FrmEditorEmpleado.Designer.cs">
       <DependentUpon>FrmEditorEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Compras\FrmBuscadorProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Compras\FrmBuscadorProveedores.Designer.cs">
+      <DependentUpon>FrmBuscadorProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Compras\FrmEditorProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Compras\FrmEditorProveedor.Designer.cs">
+      <DependentUpon>FrmEditorProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmBuscadorCategoriasProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmBuscadorCategoriasProductos.Designer.cs">
+      <DependentUpon>FrmBuscadorCategoriasProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmBuscadorProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmBuscadorProductos.Designer.cs">
+      <DependentUpon>FrmBuscadorProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmEditorCategoriaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmEditorCategoriaProducto.Designer.cs">
+      <DependentUpon>FrmEditorCategoriaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmEditorProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Inventario\FrmEditorProducto.Designer.cs">
+      <DependentUpon>FrmEditorProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Principal\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +124,18 @@
     <Compile Include="Servicios\Base\ServicioBase.cs" />
     <Compile Include="Servicios\Base\Session.cs" />
     <Compile Include="Servicios\CapitalHumano\EmpleadoService.cs" />
+    <Compile Include="Servicios\Compras\ProveedorService.cs" />
     <Compile Include="Servicios\DaoFactory.cs" />
     <Compile Include="Servicios\Interfaces\IObservador.cs" />
     <Compile Include="Servicios\Interfaces\ISujeto.cs" />
+    <Compile Include="Servicios\Inventario\CategoriaProductoService.cs" />
+    <Compile Include="Servicios\Inventario\ProductoService.cs" />
     <Compile Include="Servicios\Seguridad\UsuarioService.cs" />
     <Compile Include="Servicios\Ubicacion\UbicacionService.cs" />
     <Compile Include="ViewModels\CapitalHumano\EmpleadoView.cs" />
+    <Compile Include="ViewModels\Compras\ProveedorView.cs" />
+    <Compile Include="ViewModels\Inventario\CategoriaProductoView.cs" />
+    <Compile Include="ViewModels\Inventario\ProductoView.cs" />
     <EmbeddedResource Include="Presentacion\Base\FrmBuscador.resx">
       <DependentUpon>FrmBuscador.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +144,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\CapitalHumano\FrmEditorEmpleado.resx">
       <DependentUpon>FrmEditorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Compras\FrmBuscadorProveedores.resx">
+      <DependentUpon>FrmBuscadorProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Compras\FrmEditorProveedor.resx">
+      <DependentUpon>FrmEditorProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Inventario\FrmBuscadorCategoriasProductos.resx">
+      <DependentUpon>FrmBuscadorCategoriasProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Inventario\FrmBuscadorProductos.resx">
+      <DependentUpon>FrmBuscadorProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Inventario\FrmEditorCategoriaProducto.resx">
+      <DependentUpon>FrmEditorCategoriaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Inventario\FrmEditorProducto.resx">
+      <DependentUpon>FrmEditorProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -146,6 +206,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="chocolate.ico" />
+    <None Include="Resources\material.png" />
+    <None Include="Resources\categorias.png" />
+    <None Include="Resources\box.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\chocolate.png" />
   </ItemGroup>

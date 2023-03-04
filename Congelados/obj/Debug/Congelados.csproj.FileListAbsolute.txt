@@ -20,3 +20,9 @@ C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentac
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Base.FrmBuscador.resources
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.CapitalHumano.FrmBuscadorEmpleados.resources
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.CapitalHumano.FrmEditorEmpleado.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Compras.FrmBuscadorProveedores.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Compras.FrmEditorProveedor.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmBuscadorProductos.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmEditorProducto.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmBuscadorCategoriasProductos.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmEditorCategoriaProducto.resources

@@ -65,7 +65,6 @@
     <Compile Include="Interfaces\Compras\IDetalleCompraDao.cs" />
     <Compile Include="Interfaces\Compras\IProveedorDao.cs" />
     <Compile Include="Interfaces\Inventario\ICategoriaProductoDao.cs" />
-    <Compile Include="Interfaces\Inventario\IDetalleProductoDao.cs" />
     <Compile Include="Interfaces\Inventario\IMateriaPrimaDao.cs" />
     <Compile Include="Interfaces\Inventario\IProductoDao.cs" />
     <Compile Include="Interfaces\Seguridad\IUsuarioDao.cs" />
@@ -75,7 +74,6 @@
     <Compile Include="Interfaces\Ventas\IDetalleVentaDao.cs" />
     <Compile Include="Interfaces\Ventas\IVentaDao.cs" />
     <Compile Include="Inventario\CategoriaProductoDao.cs" />
-    <Compile Include="Inventario\DetalleProductoDao.cs" />
     <Compile Include="Inventario\MateriaPrimaDao.cs" />
     <Compile Include="Inventario\ProductoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

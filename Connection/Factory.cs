@@ -31,7 +31,6 @@ namespace Connection
             {typeof(IProveedorDao), typeof(ProveedorDao) },
 
             {typeof(ICategoriaProductoDao), typeof(CategoriaProductoDao) },
-            {typeof(IDetalleProductoDao), typeof(DetalleProductoDao) },
             {typeof(IMateriaPrimaDao), typeof(MateriaPrimaDao) },
             {typeof(IProductoDao), typeof(ProductoDao) },
 

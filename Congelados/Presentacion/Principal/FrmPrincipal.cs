@@ -1,12 +1,7 @@
 ﻿using Congelados.Presentacion.CapitalHumano;
+using Congelados.Presentacion.Compras;
+using Congelados.Presentacion.Inventario;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Congelados.Presentacion.Principal
@@ -59,6 +54,16 @@ namespace Congelados.Presentacion.Principal
         private void BtnEmpleados_Click(object sender, EventArgs e)
         {
             AddForm(new FrmBuscadorEmpleados());
+        }
+
+        private void BtnProveedores_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmBuscadorProveedores());
+        }
+
+        private void BtnProductos_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmBuscadorProductos());
         }
     }
 }

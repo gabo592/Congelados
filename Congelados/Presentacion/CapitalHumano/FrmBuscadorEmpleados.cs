@@ -45,7 +45,7 @@ namespace Congelados.Presentacion.CapitalHumano
         {
             EmpleadoView selected = GetSelected<EmpleadoView>();
 
-            if (selected.Equals(default))
+            if (selected is null || selected.Equals(default))
             {
                 MessageBox.Show(this, "Para eliminar un Empleado, primero debe seleccionarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -86,7 +86,7 @@ namespace Congelados.Presentacion.CapitalHumano
         {
             EmpleadoView selected = GetSelected<EmpleadoView>();
 
-            if (selected.Equals(default))
+            if (selected is null || selected.Equals(default))
             {
                 MessageBox.Show(this, "Para actualizar un Empleado, primero debe seleccionarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
