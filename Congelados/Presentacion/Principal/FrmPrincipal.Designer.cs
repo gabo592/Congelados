@@ -134,6 +134,7 @@
             this.BtnMateriasPrimas.TabIndex = 3;
             this.BtnMateriasPrimas.Text = "Materias Primas";
             this.BtnMateriasPrimas.UseVisualStyleBackColor = true;
+            this.BtnMateriasPrimas.Click += new System.EventHandler(this.BtnMateriasPrimas_Click);
             // 
             // BtnProveedores
             // 

@@ -13,29 +13,29 @@ namespace Congelados.Servicios.Ubicacion
         /// <summary>
         /// DAO para los Departamentos.
         /// </summary>
-        private readonly IDepartamentoDao DepartamentoDao;
+        private readonly IDepartamentoDao departamentoDao;
 
         /// <summary>
         /// DAO para los Municipios.
         /// </summary>
-        private readonly IMunicipioDao MunicipioDao;
+        private readonly IMunicipioDao municipioDao;
 
         public UbicacionService()
         {
-            DepartamentoDao = DaoFactory.Get<IDepartamentoDao>(Handler);
-            MunicipioDao = DaoFactory.Get<IMunicipioDao>(Handler);
+            departamentoDao = DaoFactory.Get<IDepartamentoDao>(Handler);
+            municipioDao = DaoFactory.Get<IMunicipioDao>(Handler);
         }
 
         /// <inheritdoc cref="IDepartamentoDao.GetById(int)"/>
-        public Departamento GetDepartamentoById(int id) => DepartamentoDao.GetById(id);
+        public Departamento GetDepartamentoById(int id) => departamentoDao.GetById(id);
 
         /// <inheritdoc cref="IMunicipioDao.GetById(int)"/>
-        public Municipio GetMunicipioById(int id) => MunicipioDao.GetById(id);
+        public Municipio GetMunicipioById(int id) => municipioDao.GetById(id);
 
         /// <inheritdoc cref="IDepartamentoDao.Read(string)"/>
-        public IEnumerable<Departamento> GetDepartamentos(string nombre) => DepartamentoDao.Read(nombre);
+        public IEnumerable<Departamento> GetDepartamentos(string nombre) => departamentoDao.Read(nombre);
 
-        public IEnumerable<Municipio> GetMunicipios(int idDepartamento) => MunicipioDao.GetByIdDepartamento(idDepartamento);
+        public IEnumerable<Municipio> GetMunicipios(int idDepartamento) => municipioDao.GetByIdDepartamento(idDepartamento);
 
         public override void Dispose() => Handler.Clear();
 

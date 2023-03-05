@@ -16,11 +16,11 @@ namespace Congelados.Servicios.Inventario
         /// <summary>
         /// DAO para las Categorías de Productos.
         /// </summary>
-        private readonly ICategoriaProductoDao CategoriaProductoDao;
+        private readonly ICategoriaProductoDao categoriaProductoDao;
 
         public CategoriaProductoService()
         {
-            CategoriaProductoDao = DaoFactory.Get<ICategoriaProductoDao>(Handler);
+            categoriaProductoDao = DaoFactory.Get<ICategoriaProductoDao>(Handler);
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Congelados.Servicios.Inventario
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            CategoriaProducto categoriaProducto = CategoriaProductoDao.Create(new CategoriaProducto
+            CategoriaProducto categoriaProducto = categoriaProductoDao.Create(new CategoriaProducto
             {
                 Nombre = properties["Nombre"].ToString(),
                 Descripcion = properties["Descripcion"].ToString()
@@ -42,7 +42,7 @@ namespace Congelados.Servicios.Inventario
         }
 
         /// <inheritdoc cref="ICategoriaProductoDao.GetById(int)"/>
-        public CategoriaProducto GetById(int id) => CategoriaProductoDao.GetById(id);
+        public CategoriaProducto GetById(int id) => categoriaProductoDao.GetById(id);
 
         /// <summary>
         /// Realiza una búsqueda dentro de la base de datos hasta encontrar una serie de registros que coincidan con el valor a filtrar.
@@ -51,7 +51,7 @@ namespace Congelados.Servicios.Inventario
         /// <returns>Colección de objetos de tipo Categoría de Producto desde una vista personalizada.</returns>
         public IEnumerable<CategoriaProductoView> GetCategorias(string value)
         {
-            IEnumerable<CategoriaProducto> categoriasProductos = CategoriaProductoDao.Read(value);
+            IEnumerable<CategoriaProducto> categoriasProductos = categoriaProductoDao.Read(value);
 
             return categoriasProductos.Select(categoria =>
             {
@@ -73,7 +73,7 @@ namespace Congelados.Servicios.Inventario
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            CategoriaProducto categoriaProducto = CategoriaProductoDao.Update(new CategoriaProducto
+            CategoriaProducto categoriaProducto = categoriaProductoDao.Update(new CategoriaProducto
             {
                 Id = (int)properties["Id"],
                 Nombre = properties["Nombre"].ToString(),
@@ -90,7 +90,7 @@ namespace Congelados.Servicios.Inventario
         /// <param name="categoriaProducto">Categoría de Producto a eliminar.</param>
         public void Delete(CategoriaProducto categoriaProducto)
         {
-            CategoriaProducto result = CategoriaProductoDao.Delete(categoriaProducto);
+            CategoriaProducto result = categoriaProductoDao.Delete(categoriaProducto);
 
             if (result is null) Handler.Add("MODELO_NULO");
         }

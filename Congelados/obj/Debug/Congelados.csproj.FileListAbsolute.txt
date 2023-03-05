@@ -26,3 +26,5 @@ C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentac
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmEditorProducto.resources
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmBuscadorCategoriasProductos.resources
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmEditorCategoriaProducto.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmBuscadorMateriasPrimas.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Inventario.FrmEditorMateriaPrima.resources

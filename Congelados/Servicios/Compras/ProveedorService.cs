@@ -16,11 +16,11 @@ namespace Congelados.Servicios.Compras
         /// <summary>
         /// DAO para los Proveedores.
         /// </summary>
-        private readonly IProveedorDao ProveedorDao;
+        private readonly IProveedorDao proveedorDao;
 
         public ProveedorService()
         {
-            ProveedorDao = DaoFactory.Get<IProveedorDao>(Handler);
+            proveedorDao = DaoFactory.Get<IProveedorDao>(Handler);
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Congelados.Servicios.Compras
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            Proveedor proveedor = ProveedorDao.Create(new Proveedor
+            Proveedor proveedor = proveedorDao.Create(new Proveedor
             {
                 Nombre = properties["Nombre"].ToString(),
                 Telefono = properties["Telefono"].ToString(),
@@ -43,7 +43,7 @@ namespace Congelados.Servicios.Compras
         }
 
         /// <inheritdoc cref="IProveedorDao.GetById(int)"/>
-        public Proveedor GetById(int id) => ProveedorDao.GetById(id);
+        public Proveedor GetById(int id) => proveedorDao.GetById(id);
 
         /// <summary>
         /// Realiza la búsqueda dentro de la base de datos hasta encontrar una colección de registros que coincidan con el valor a filtrar.
@@ -52,7 +52,7 @@ namespace Congelados.Servicios.Compras
         /// <returns>Colección de objetos de tipo Proveedor desde una vista personalizada.</returns>
         public IEnumerable<ProveedorView> GetProveedores(string value)
         {
-            IEnumerable<Proveedor> proveedores = ProveedorDao.Read(value);
+            IEnumerable<Proveedor> proveedores = proveedorDao.Read(value);
 
             return proveedores.Select(proveedor =>
             {
@@ -75,7 +75,7 @@ namespace Congelados.Servicios.Compras
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            Proveedor proveedor = ProveedorDao.Update(new Proveedor
+            Proveedor proveedor = proveedorDao.Update(new Proveedor
             {
                 Id = (int)properties["Id"],
                 Nombre = properties["Nombre"].ToString(),
@@ -93,7 +93,7 @@ namespace Congelados.Servicios.Compras
         /// <param name="proveedor">Proveedor a eliminar.</param>
         public void Delete(Proveedor proveedor)
         {
-            Proveedor result = ProveedorDao.Delete(proveedor);
+            Proveedor result = proveedorDao.Delete(proveedor);
 
             if (result is null) Handler.Add("MODELO_NULO");
         }

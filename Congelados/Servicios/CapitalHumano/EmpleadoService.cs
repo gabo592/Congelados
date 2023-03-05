@@ -19,17 +19,17 @@ namespace Congelados.Servicios.CapitalHumano
         /// <summary>
         /// DAO para los Empleados.
         /// </summary>
-        private readonly IEmpleadoDao EmpleadoDao;
+        private readonly IEmpleadoDao empleadoDao;
 
         /// <summary>
         /// Servicio de Ubicaciones.
         /// </summary>
-        private readonly UbicacionService UbicacionService;
+        private readonly UbicacionService ubicacionService;
 
         public EmpleadoService()
         {
-            EmpleadoDao = DaoFactory.Get<IEmpleadoDao>(Handler);
-            UbicacionService = new UbicacionService();
+            empleadoDao = DaoFactory.Get<IEmpleadoDao>(Handler);
+            ubicacionService = new UbicacionService();
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace Congelados.Servicios.CapitalHumano
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            Empleado empleado = EmpleadoDao.Create(new Empleado
+            Empleado empleado = empleadoDao.Create(new Empleado
             {
                 PrimerNombre = properties["PrimerNombre"].ToString(),
                 SegundoNombre = properties["SegundoNombre"].ToString(),
@@ -57,7 +57,7 @@ namespace Congelados.Servicios.CapitalHumano
         }
 
         /// <inheritdoc cref="IEmpleadoDao.GetById(int)"/>
-        public Empleado GetById(int id) => EmpleadoDao.GetById(id);
+        public Empleado GetById(int id) => empleadoDao.GetById(id);
 
         /// <summary>
         /// Realiza una búsqueda dentro de la base de datos hasta encontrar una colección de registros que coincidan con el valor a filtrar.
@@ -66,12 +66,12 @@ namespace Congelados.Servicios.CapitalHumano
         /// <returns>Colección de objetos de tipo Empleado desde una vista personalizada.</returns>
         public IEnumerable<EmpleadoView> GetEmpleados(string value)
         {
-            IEnumerable<Empleado> empleados = EmpleadoDao.Read(value);
+            IEnumerable<Empleado> empleados = empleadoDao.Read(value);
 
             return empleados.Select(empleado =>
             {
-                Municipio municipio = UbicacionService.GetMunicipioById(empleado.IdMunicipio);
-                Departamento departamento = UbicacionService.GetDepartamentoById(municipio.IdDepartamento);
+                Municipio municipio = ubicacionService.GetMunicipioById(empleado.IdMunicipio);
+                Departamento departamento = ubicacionService.GetDepartamentoById(municipio.IdDepartamento);
 
                 return new EmpleadoView
                 {
@@ -96,7 +96,7 @@ namespace Congelados.Servicios.CapitalHumano
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            Empleado empleado = EmpleadoDao.Update(new Empleado
+            Empleado empleado = empleadoDao.Update(new Empleado
             {
                 Id = (int)properties["Id"],
                 PrimerNombre = properties["PrimerNombre"].ToString(),
@@ -119,7 +119,7 @@ namespace Congelados.Servicios.CapitalHumano
         /// <param name="empleado">Empleado a eliminar.</param>
         public void Delete(Empleado empleado)
         {
-            Empleado result = EmpleadoDao.Delete(empleado);
+            Empleado result = empleadoDao.Delete(empleado);
 
             if (result is null) Handler.Add("MODELO_NULO");
         }
@@ -127,7 +127,7 @@ namespace Congelados.Servicios.CapitalHumano
         public override void Dispose()
         {
             Handler.Clear();
-            UbicacionService.Dispose();
+            ubicacionService.Dispose();
         }
 
         public override string GetErrorMessage()
@@ -139,14 +139,14 @@ namespace Congelados.Servicios.CapitalHumano
                 builder.AppendLine(Handler.GetErrorMessage());
             }
 
-            if (UbicacionService != null && UbicacionService.HasError())
+            if (ubicacionService != null && ubicacionService.HasError())
             {
-                builder.AppendLine(UbicacionService.GetErrorMessage());
+                builder.AppendLine(ubicacionService.GetErrorMessage());
             }
 
             return builder.ToString();
         }
 
-        public override bool HasError() => Handler.HasError() || UbicacionService.HasError();
+        public override bool HasError() => Handler.HasError() || ubicacionService.HasError();
     }
 }

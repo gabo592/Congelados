@@ -17,16 +17,16 @@ namespace Congelados.Servicios.Seguridad
         /// <summary>
         /// DAO para los Usuarios.
         /// </summary>
-        private readonly IUsuarioDao UsuarioDao;
+        private readonly IUsuarioDao usuarioDao;
 
         public UsuarioService()
         {
-            UsuarioDao = DaoFactory.Get<IUsuarioDao>(Handler);
+            usuarioDao = DaoFactory.Get<IUsuarioDao>(Handler);
         }
 
         public void Login(string nombre, string clave)
         {
-            Usuario usuario = UsuarioDao.Login(nombre, clave);
+            Usuario usuario = usuarioDao.Login(nombre, clave);
 
             if (usuario is null)
             {

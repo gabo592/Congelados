@@ -65,5 +65,10 @@ namespace Congelados.Presentacion.Principal
         {
             AddForm(new FrmBuscadorProductos());
         }
+
+        private void BtnMateriasPrimas_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmBuscadorMateriasPrimas());
+        }
     }
 }

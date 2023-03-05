@@ -17,17 +17,17 @@ namespace Congelados.Servicios.Inventario
         /// <summary>
         /// DAO para los Productos.
         /// </summary>
-        private readonly IProductoDao ProductoDao;
+        private readonly IProductoDao productoDao;
 
         /// <summary>
         /// Servicios para las Categorías de Productos.
         /// </summary>
-        private readonly CategoriaProductoService CategoriaProductoService;
+        private readonly CategoriaProductoService categoriaProductoService;
 
         public ProductoService()
         {
-            ProductoDao = DaoFactory.Get<IProductoDao>(Handler);
-            CategoriaProductoService = new CategoriaProductoService();
+            productoDao = DaoFactory.Get<IProductoDao>(Handler);
+            categoriaProductoService = new CategoriaProductoService();
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace Congelados.Servicios.Inventario
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            Producto producto = ProductoDao.Create(new Producto
+            Producto producto = productoDao.Create(new Producto
             {
                 Descripcion = properties["Descripcion"].ToString(),
                 Precio = Convert.ToDecimal(properties["Precio"]),
@@ -51,7 +51,7 @@ namespace Congelados.Servicios.Inventario
         }
 
         /// <inheritdoc cref="IProductoDao.GetById(int)"/>
-        public Producto GetById(int id) => ProductoDao.GetById(id);
+        public Producto GetById(int id) => productoDao.GetById(id);
 
         /// <summary>
         /// Realiza una búsqueda dentro de la base de datos hasta encontrar una colección de registros que coincidan con la Descripción a filtrar.
@@ -60,11 +60,11 @@ namespace Congelados.Servicios.Inventario
         /// <returns>Colección de objetos de tipo Producto desde una vista personalizada.</returns>
         public IEnumerable<ProductoView> GetProductos(string descripcion)
         {
-            IEnumerable<Producto> productos = ProductoDao.Read(descripcion);
+            IEnumerable<Producto> productos = productoDao.Read(descripcion);
 
             return productos.Select(producto =>
             {
-                CategoriaProducto categoriaProducto = CategoriaProductoService.GetById(producto.IdCategoria);
+                CategoriaProducto categoriaProducto = categoriaProductoService.GetById(producto.IdCategoria);
 
                 return new ProductoView
                 {
@@ -86,7 +86,7 @@ namespace Congelados.Servicios.Inventario
         {
             if (properties is null) throw new ArgumentNullException(nameof(properties), "Las propiedades del objeto no pueden ser nulas.");
 
-            Producto producto = ProductoDao.Update(new Producto
+            Producto producto = productoDao.Update(new Producto
             {
                 Id = (int)properties["Id"],
                 Descripcion = properties["Descripcion"].ToString(),
@@ -105,7 +105,7 @@ namespace Congelados.Servicios.Inventario
         /// <param name="producto">Producto a eliminar.</param>
         public void Delete(Producto producto)
         {
-            Producto result = ProductoDao.Delete(producto);
+            Producto result = productoDao.Delete(producto);
 
             if (result is null) Handler.Add("MODELO_NULO");
         }
@@ -113,7 +113,7 @@ namespace Congelados.Servicios.Inventario
         public override void Dispose()
         {
             Handler.Clear();
-            CategoriaProductoService.Dispose();
+            categoriaProductoService.Dispose();
         }
 
         public override string GetErrorMessage()
@@ -125,14 +125,14 @@ namespace Congelados.Servicios.Inventario
                 builder.AppendLine(Handler.GetErrorMessage());
             }
 
-            if (CategoriaProductoService.HasError())
+            if (categoriaProductoService.HasError())
             {
-                builder.AppendLine(CategoriaProductoService.GetErrorMessage());
+                builder.AppendLine(categoriaProductoService.GetErrorMessage());
             }
 
             return builder.ToString();
         }
 
-        public override bool HasError() => Handler.HasError() || CategoriaProductoService.HasError();
+        public override bool HasError() => Handler.HasError() || categoriaProductoService.HasError();
     }
 }
