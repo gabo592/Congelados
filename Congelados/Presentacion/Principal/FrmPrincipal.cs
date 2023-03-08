@@ -1,6 +1,7 @@
 ﻿using Congelados.Presentacion.CapitalHumano;
 using Congelados.Presentacion.Compras;
 using Congelados.Presentacion.Inventario;
+using Congelados.Presentacion.Ventas;
 using System;
 using System.Windows.Forms;
 
@@ -69,6 +70,11 @@ namespace Congelados.Presentacion.Principal
         private void BtnMateriasPrimas_Click(object sender, EventArgs e)
         {
             AddForm(new FrmBuscadorMateriasPrimas());
+        }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmBuscadorClientes());
         }
     }
 }

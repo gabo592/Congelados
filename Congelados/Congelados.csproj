@@ -130,6 +130,18 @@
     <Compile Include="Presentacion\Principal\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Ventas\FrmBuscadorClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventas\FrmBuscadorClientes.Designer.cs">
+      <DependentUpon>FrmBuscadorClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ventas\FrmEditorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventas\FrmEditorCliente.Designer.cs">
+      <DependentUpon>FrmEditorCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\Base\IServicioBase.cs" />
@@ -145,11 +157,13 @@
     <Compile Include="Servicios\Inventario\ProductoService.cs" />
     <Compile Include="Servicios\Seguridad\UsuarioService.cs" />
     <Compile Include="Servicios\Ubicacion\UbicacionService.cs" />
+    <Compile Include="Servicios\Ventas\ClienteService.cs" />
     <Compile Include="ViewModels\CapitalHumano\EmpleadoView.cs" />
     <Compile Include="ViewModels\Compras\ProveedorView.cs" />
     <Compile Include="ViewModels\Inventario\CategoriaProductoView.cs" />
     <Compile Include="ViewModels\Inventario\MateriaPrimaView.cs" />
     <Compile Include="ViewModels\Inventario\ProductoView.cs" />
+    <Compile Include="ViewModels\Ventas\ClienteView.cs" />
     <EmbeddedResource Include="Presentacion\Base\FrmBuscador.resx">
       <DependentUpon>FrmBuscador.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +202,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventas\FrmBuscadorClientes.resx">
+      <DependentUpon>FrmBuscadorClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventas\FrmEditorCliente.resx">
+      <DependentUpon>FrmEditorCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
