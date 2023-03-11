@@ -104,6 +104,7 @@
             this.BtnUsuarios.TabIndex = 5;
             this.BtnUsuarios.Text = "Usuarios";
             this.BtnUsuarios.UseVisualStyleBackColor = true;
+            this.BtnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
             // 
             // BtnProductos
             // 

@@ -130,6 +130,18 @@
     <Compile Include="Presentacion\Principal\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Seguridad\FrmBuscadorUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Seguridad\FrmBuscadorUsuarios.Designer.cs">
+      <DependentUpon>FrmBuscadorUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Seguridad\FrmEditorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Seguridad\FrmEditorUsuario.Designer.cs">
+      <DependentUpon>FrmEditorUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Ventas\FrmBuscadorClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +175,7 @@
     <Compile Include="ViewModels\Inventario\CategoriaProductoView.cs" />
     <Compile Include="ViewModels\Inventario\MateriaPrimaView.cs" />
     <Compile Include="ViewModels\Inventario\ProductoView.cs" />
+    <Compile Include="ViewModels\Seguridad\UsuarioView.cs" />
     <Compile Include="ViewModels\Ventas\ClienteView.cs" />
     <EmbeddedResource Include="Presentacion\Base\FrmBuscador.resx">
       <DependentUpon>FrmBuscador.cs</DependentUpon>
@@ -202,6 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Seguridad\FrmBuscadorUsuarios.resx">
+      <DependentUpon>FrmBuscadorUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Seguridad\FrmEditorUsuario.resx">
+      <DependentUpon>FrmEditorUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventas\FrmBuscadorClientes.resx">
       <DependentUpon>FrmBuscadorClientes.cs</DependentUpon>
