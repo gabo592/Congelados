@@ -168,6 +168,7 @@
             this.BtnCompras.TabIndex = 1;
             this.BtnCompras.Text = "Compras";
             this.BtnCompras.UseVisualStyleBackColor = true;
+            this.BtnCompras.Click += new System.EventHandler(this.BtnCompras_Click);
             // 
             // BtnEmpleados
             // 

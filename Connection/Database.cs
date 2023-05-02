@@ -75,13 +75,7 @@ namespace Connection
                     {
                         parameters.TryGetValue(RemoveSign(parameter.ParameterName), out object value);
 
-                        if (value is null)
-                        {
-                            parameter.Value = DBNull.Value;
-                            continue;
-                        }
-
-                        parameter.Value = value;
+                        parameter.Value = value is null ? DBNull.Value : value;
                     }
 
                     try

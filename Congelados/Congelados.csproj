@@ -58,6 +58,12 @@
     <Compile Include="Presentacion\Base\FrmBuscador.Designer.cs">
       <DependentUpon>FrmBuscador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Base\FrmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Base\FrmCaja.Designer.cs">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\CapitalHumano\FrmBuscadorEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="Presentacion\Compras\FrmBuscadorProveedores.Designer.cs">
       <DependentUpon>FrmBuscadorProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Compras\FrmCajaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Compras\FrmCajaCompras.Designer.cs">
+      <DependentUpon>FrmCajaCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Compras\FrmEditorProveedor.cs">
       <SubType>Form</SubType>
@@ -160,6 +172,7 @@
     <Compile Include="Servicios\Base\ServicioBase.cs" />
     <Compile Include="Servicios\Base\Session.cs" />
     <Compile Include="Servicios\CapitalHumano\EmpleadoService.cs" />
+    <Compile Include="Servicios\Compras\CompraService.cs" />
     <Compile Include="Servicios\Compras\ProveedorService.cs" />
     <Compile Include="Servicios\DaoFactory.cs" />
     <Compile Include="Servicios\Interfaces\IObservador.cs" />
@@ -171,6 +184,8 @@
     <Compile Include="Servicios\Ubicacion\UbicacionService.cs" />
     <Compile Include="Servicios\Ventas\ClienteService.cs" />
     <Compile Include="ViewModels\CapitalHumano\EmpleadoView.cs" />
+    <Compile Include="ViewModels\Compras\CompraView.cs" />
+    <Compile Include="ViewModels\Compras\DetalleCompraView.cs" />
     <Compile Include="ViewModels\Compras\ProveedorView.cs" />
     <Compile Include="ViewModels\Inventario\CategoriaProductoView.cs" />
     <Compile Include="ViewModels\Inventario\MateriaPrimaView.cs" />
@@ -180,6 +195,9 @@
     <EmbeddedResource Include="Presentacion\Base\FrmBuscador.resx">
       <DependentUpon>FrmBuscador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Base\FrmCaja.resx">
+      <DependentUpon>FrmCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\CapitalHumano\FrmBuscadorEmpleados.resx">
       <DependentUpon>FrmBuscadorEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Compras\FrmBuscadorProveedores.resx">
       <DependentUpon>FrmBuscadorProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Compras\FrmCajaCompras.resx">
+      <DependentUpon>FrmCajaCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Compras\FrmEditorProveedor.resx">
       <DependentUpon>FrmEditorProveedor.cs</DependentUpon>
@@ -265,6 +286,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="chocolate.ico" />
+    <None Include="Resources\ventas.png" />
+    <None Include="Resources\team.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\delivery-truck.png" />
+    <None Include="Resources\carts.png" />
     <None Include="Resources\material.png" />
     <None Include="Resources\categorias.png" />
     <None Include="Resources\box.png" />

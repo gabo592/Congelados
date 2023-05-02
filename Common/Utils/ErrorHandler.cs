@@ -45,10 +45,7 @@ namespace Common.Utils
 
             foreach (string value in this)
             {
-                string message = resourceManager.GetString(value);
-
-                if (message is null) message = value;
-
+                string message = resourceManager.GetString(value) ?? value;
                 builder.AppendLine(message);
             }
 

@@ -82,5 +82,10 @@ namespace Congelados.Presentacion.Principal
         {
             AddForm(new FrmBuscadorUsuarios());
         }
+
+        private void BtnCompras_Click(object sender, EventArgs e)
+        {
+            AddForm(new FrmCajaCompras());
+        }
     }
 }

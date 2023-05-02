@@ -32,3 +32,5 @@ C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentac
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Ventas.FrmEditorCliente.resources
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Seguridad.FrmBuscadorUsuarios.resources
 C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Seguridad.FrmEditorUsuario.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Base.FrmCaja.resources
+C:\Users\gabri\source\repos\Congelados\Congelados\obj\Debug\Congelados.Presentacion.Compras.FrmCajaCompras.resources
