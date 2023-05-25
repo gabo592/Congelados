@@ -83,10 +83,7 @@ namespace Congelados.Servicios.Compras
                 Descuento = detalle.Descuento
             }).ToList();
 
-            detalleCompras.ForEach(detalle =>
-            {
-                DetalleCompra detalleCompra = detalleCompraDao.Create(detalle);
-            });
+            detalleCompras.ForEach(detalle => detalleCompraDao.Create(detalle));
         }
 
         /// <summary>

@@ -22,8 +22,14 @@ namespace Models.Ventas
         /// </summary>
         public decimal Precio { get; set; }
 
+        /// <summary>
+        /// Obtiene o establece la Cantidad del Producto involucrado con el Detalle de Venta.
+        /// </summary>
         public double Cantidad { get; set; }
 
+        /// <summary>
+        /// Obtiene o establece el descuento aplicado sobre el Producto en la Venta.
+        /// </summary>
         public double Descuento { get; set; }
     }
 }

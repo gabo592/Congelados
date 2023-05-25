@@ -73,6 +73,7 @@
             this.BtnVentas.TabIndex = 7;
             this.BtnVentas.Text = "Ventas";
             this.BtnVentas.UseVisualStyleBackColor = true;
+            this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
             // 
             // BtnClientes
             // 

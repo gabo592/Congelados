@@ -12,6 +12,29 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/Congelados/</UpdateUrl>
+    <TargetCulture>es-NI</TargetCulture>
+    <ProductName>Congelados</ProductName>
+    <PublisherName>G-Software</PublisherName>
+    <SuiteName>G-Software Products</SuiteName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +60,24 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Congelados.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>068535CBED3F1DCCCA61398E3A59FF80C44E5F14</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Congelados_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -160,6 +201,12 @@
     <Compile Include="Presentacion\Ventas\FrmBuscadorClientes.Designer.cs">
       <DependentUpon>FrmBuscadorClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Ventas\FrmCajaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventas\FrmCajaVentas.Designer.cs">
+      <DependentUpon>FrmCajaVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Ventas\FrmEditorCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +230,7 @@
     <Compile Include="Servicios\Seguridad\UsuarioService.cs" />
     <Compile Include="Servicios\Ubicacion\UbicacionService.cs" />
     <Compile Include="Servicios\Ventas\ClienteService.cs" />
+    <Compile Include="Servicios\Ventas\VentaService.cs" />
     <Compile Include="ViewModels\CapitalHumano\EmpleadoView.cs" />
     <Compile Include="ViewModels\Compras\CompraView.cs" />
     <Compile Include="ViewModels\Compras\DetalleCompraView.cs" />
@@ -192,6 +240,8 @@
     <Compile Include="ViewModels\Inventario\ProductoView.cs" />
     <Compile Include="ViewModels\Seguridad\UsuarioView.cs" />
     <Compile Include="ViewModels\Ventas\ClienteView.cs" />
+    <Compile Include="ViewModels\Ventas\DetalleVentaView.cs" />
+    <Compile Include="ViewModels\Ventas\VentaView.cs" />
     <EmbeddedResource Include="Presentacion\Base\FrmBuscador.resx">
       <DependentUpon>FrmBuscador.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +296,9 @@
     <EmbeddedResource Include="Presentacion\Ventas\FrmBuscadorClientes.resx">
       <DependentUpon>FrmBuscadorClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventas\FrmCajaVentas.resx">
+      <DependentUpon>FrmCajaVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventas\FrmEditorCliente.resx">
       <DependentUpon>FrmEditorCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +312,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Congelados_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -310,6 +365,18 @@
       <Project>{efe3d500-0511-4b3a-a83a-992e7f660ef2}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
